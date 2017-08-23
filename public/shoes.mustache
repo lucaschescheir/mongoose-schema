@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title></title>
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Shoe Collection</h1>
+    <section id="add">
+
+    <form method="post" action="/">
+      <h2>Add a shoe</h2>
+    <input type="text" name="brand" placeholder="Brand of Shoe">
+    <input type="text" name="name" placeholder="name of shoe">
+    <input type="text" name="description" placeholder="Description of shoe">
+    <input type="number" name="size" placeholder="Size">
+    <input type="number" name="price" placeholder="Price">
+    <input type="text" name="type" placeholder="Type of shoe">
+    <input type="text" name="pictureUrl" placeholder="URL of picture">
+    <input type="submit" value="submit">
+</form>
+</section>
+<section id="search">
+    <form method="post" action="/searchShoe" id="form">
+      <input type="text" name="search" placeholder="search for shoes">
+      <input type="submit" value="search" id="button">
+    </form>
+      {{ #names }}
+      <div>
+        <img src={{ pictureUrl }}
+        <p> {{ brand }} </p>
+        <p class="name"> {{ name }} </p>
+        <p> {{ description }}</p>
+        <p> {{ details.price }} </p>
+        <p> {{ details.type }} </p>
+
+      </div>
+      {{ /names }}
+    </section>
+    <section id="delete">
+      <h3>Delete a shoe</h3>
+      <form method="post" action="/delete" id="form">
+        <input type="text" name="nameDelete" placeholder="Delete Shoe">
+        <input type="submit" value="Delete" id="button">
+      </form>
+    </section>
+    <section id="change">
+      <h3>Modify a shoe</h3>
+      <form method="post" action="/change" id="form">
+        <input type="text" name="brand" placeholder="Shoe to modify">
+        <input type="text" name="name" placeholder="edit name">
+        <input type="submit" value="modify" id="button">
+      </form>
+    </section>
+  </body>
+</html>

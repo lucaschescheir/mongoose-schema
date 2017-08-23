@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<title></title>
+
+<link href="style.css" rel="stylesheet">
+<form method="post" action="/searchShoe" id="form">
+  <input type="text" name="search" placeholder="search for shoes">
+  <input type="submit" value="search" id="button">
+</form>
+
+
+
+<body>
+
+
+  {{ #names }}
+  <div>
+    <p> {{ brand }} </p>
+    <p class="name"> {{ name }} </p>
+    <p> {{ description }}</p>
+  </div>
+  {{ /names }}
+
+
+</body>
+
+</html>

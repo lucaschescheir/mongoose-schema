@@ -1,0 +1,19 @@
+#add {
+  margin: 15px;
+  border: 1px solid black;
+}
+
+#search {
+  margin: 15px;
+  border: 1px solid black;
+}
+
+section {
+  border: 1px solid black;
+  margin: 15px;
+}
+
+div {
+  border: 1px solid black;
+  width: 200px;
+}
